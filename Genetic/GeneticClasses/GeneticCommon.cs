@@ -18,7 +18,11 @@ namespace Genetic.GeneticClasses
         short N;                             // Число городов
         double[] dl = new double[K];         // Длины маршрутов
 
-        // Считывание городов из файла
+        /// <summary>
+        /// Считывание городов из файла
+        /// </summary>
+        /// <param name="FileName"></param>
+        /// <returns></returns>
         private short ReadCities(string FileName)
         {
             N = 0;
@@ -52,7 +56,9 @@ namespace Genetic.GeneticClasses
             return N;
         }
 
-        // Инициализация
+        /// <summary>
+        /// Инициализация
+        /// </summary>
         private void Inic()
         {
             short s1, jj;
@@ -75,7 +81,9 @@ namespace Genetic.GeneticClasses
             }
         }
 
-        // Селекция
+        /// <summary>
+        /// Селекция
+        /// </summary>
         private void Selec()
         {
             short nm;
@@ -129,7 +137,11 @@ namespace Genetic.GeneticClasses
             }
         }
 
-        // Наследование от папы
+        /// <summary>
+        /// Наследование от папы
+        /// </summary>
+        /// <param name="p"></param>
+        /// <param name="r"></param>
         private void Papa(short p, short r)
         {
             short s1, pos;
@@ -150,7 +162,11 @@ namespace Genetic.GeneticClasses
             }
         }
 
-        // Наследование от мамы
+        /// <summary>
+        /// Наследованеи от мамы
+        /// </summary>
+        /// <param name="m"></param>
+        /// <param name="r"></param>
         private void Mama(short m, short r)
         {
             bool est; // Флаг наличия
@@ -176,7 +192,10 @@ namespace Genetic.GeneticClasses
             }
         }
 
-        // Мутация
+        /// <summary>
+        /// Мутация
+        /// </summary>
+        /// <param name="r"></param>
         private void Mut(short r)
         {
             short c, p1, p2;
@@ -190,7 +209,9 @@ namespace Genetic.GeneticClasses
             pop[r, p2] = c;
         }
 
-        // Скрещивание
+        /// <summary>
+        /// Скрещивание
+        /// </summary>
         private void Scresh()
         {
             short r, m, p;
